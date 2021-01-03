@@ -6,9 +6,9 @@ public class F {
         int h = 0;
         System.out.println("HOLA,ADIOS");
         F jl = new F();
+        long start = System.currentTimeMillis();
         h = jl.fibonaccirecursivo(Integer.parseInt(args[0]));
-        System.out.println(h);
-
+        System.out.println("Recursive: " + h + " in " + (System.currentTimeMillis() - start) + "ms");
 
     }
 
