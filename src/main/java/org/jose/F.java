@@ -2,17 +2,26 @@ package org.jose;
 
 public class F {
     public static void main(String[] args) {
+
+        int h = 0;
         System.out.println("HOLA,ADIOS");
+        F jl = new F();
+        h = jl.fibonaccirecursivo(Integer.parseInt(args[0]));
+        System.out.println(h);
+
+
     }
 
-    private int fibonacci(int n) {
+    private int fibonaccirecursivo(int n) {
         if (n == 1 || n == 0) {
             return 1;
         } else {
             if (n > 0) {
-                return fibonacci(n - 1) + fibonacci(n - 2);
+                return fibonaccirecursivo(n - 1) + fibonaccirecursivo(n - 2);
             } else {
-                throw new Exception()            }
+                throw new RuntimeException("Error de calculo con: " + n);
+            }
         }
     }
+
 }
