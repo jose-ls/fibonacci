@@ -1,18 +1,18 @@
 package org.jose;
 
 public class F {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         int h = 0;
         System.out.println("HOLA,ADIOS");
-        F jl = new F();
+        final F jl = new F();
         long start = System.currentTimeMillis();
         h = jl.fibonaccirecursivo(Integer.parseInt(args[0]));
         System.out.println("Recursive: " + h + " in " + (System.currentTimeMillis() - start) + "ms");
 
     }
 
-    private int fibonaccirecursivo(int n) {
+    private int fibonaccirecursivo(final int n) {
         if (n == 1 || n == 0) {
             return 1;
         } else {
