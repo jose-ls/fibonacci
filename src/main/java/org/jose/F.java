@@ -1,6 +1,10 @@
 package org.jose;
 
 public class F {
+    /**
+     * Entry point.
+     * @param args Arguments passed to the program invocation.
+     */
     public static void main(final String[] args) {
 
         int h = 0;
