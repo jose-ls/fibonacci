@@ -14,6 +14,7 @@ jobs:
           FILTER_REGEX_INCLUDE: src/.*
           VALIDATE_EDITORCONFIG: true
           VALIDATE_JAVA: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   assemble:
     runs-on: ubuntu-20.04
     steps:
