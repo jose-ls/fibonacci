@@ -8,11 +8,11 @@ public class F {
     public static void main(final String[] args) {
 
 
-        int NumeroCalculado = 0;
+        int numeroCalculado = 0;
         F bu = new F();
         long start = System.currentTimeMillis();
-        NumeroCalculado = bu.fibonacciBottomUp(Integer.parseInt(args[0]));
-        System.out.println("Bottom-Up: " + NumeroCalculado + " in "
+        numeroCalculado = bu.fibonacciBottomUp(Integer.parseInt(args[0]));
+        System.out.println("Bottom-Up: " + numeroCalculado + " in "
                 + (System.currentTimeMillis() - start) + "ms");
 
 
@@ -30,7 +30,7 @@ public class F {
         }
     }
 
-    private int fibonacciBottomUp(int n) {
+    private int fibonacciBottomUp(final int n) {
         int resultado = 1;
         int nmenos1 = 1;
         int nmenos2 = 1;
