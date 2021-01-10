@@ -7,12 +7,12 @@ public class F {
      */
     public static void main(final String[] args) {
 
-        int h = 0;
-        int j = 0;
-        final F jl = new F();
+
+        int NumeroCalculado = 0;
+        F bu = new F();
         long start = System.currentTimeMillis();
-        h = jl.fibonaccirecursivo(Integer.parseInt(args[0]));
-        System.out.println("Recursive: " + h + " in "
+        NumeroCalculado = bu.fibonacciBottomUp(Integer.parseInt(args[0]));
+        System.out.println("Bottom-Up: " + NumeroCalculado + " in "
                 + (System.currentTimeMillis() - start) + "ms");
 
 
@@ -30,7 +30,7 @@ public class F {
         }
     }
 
-    private int fibonaccibottom_up(int n) {
+    private int fibonacciBottomUp(int n) {
         int resultado = 1;
         int nmenos1 = 1;
         int nmenos2 = 1;
