@@ -8,21 +8,15 @@ public final class FibonacciConTiempo implements FibonacciCalculator {
      * Entry point.
      */
     private final FibonacciCalculator delegate;
-
     /**
      * Entry point.
-     *
      * @param delegateA Objeto
      */
     public FibonacciConTiempo(final FibonacciCalculator delegateA) {
         this.delegate = delegateA;
-
     }
-
-
     /**
      * Entry point.
-     *
      * @param numero numero a calcular
      * @return devuelve el resultado del numero
      */

@@ -1,10 +1,12 @@
 package org.jose;
+
 /**
  * Entry point.
  */
 public class FibonacciRecursivo implements FibonacciConMetodo {
     /**
      * Entry point.
+     *
      * @param n numero a calcular
      * @return devuelve el resultado del calculo
      */

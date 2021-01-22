@@ -1,10 +1,12 @@
 package org.jose;
+
 /**
  * Entry point.
  */
 public class FibonacciBottomUp implements FibonacciConMetodo {
     /**
      * Entry point.
+     *
      * @param n numero a calcular
      * @return devuelve el resultado del calculo
      */
@@ -25,8 +27,6 @@ public class FibonacciBottomUp implements FibonacciConMetodo {
             } else {
                 throw new RuntimeException("Error de calculo con: " + n);
             }
-
         }
     }
-
 }
