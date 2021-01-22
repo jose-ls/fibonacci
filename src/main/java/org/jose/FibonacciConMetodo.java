@@ -1,5 +1,7 @@
 package org.jose;
 
-public interface FibonacciConMetodo extends FibonacciCalculator{
-
+public interface FibonacciConMetodo extends FibonacciCalculator {
+/**
+ * Entry point.
+ */
 }

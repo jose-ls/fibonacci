@@ -1,8 +1,10 @@
 package org.jose;
 
 public class FibonacciBottomUp implements FibonacciConMetodo {
-
-     public int calcular(final int n) {
+    /**
+     * Entry point.
+     */
+    public int calcular(final int n) {
         int resultado = 1;
         int nmenos1 = 1;
         int nmenos2 = 1;

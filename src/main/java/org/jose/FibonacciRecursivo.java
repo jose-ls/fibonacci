@@ -1,7 +1,9 @@
 package org.jose;
 
 public class FibonacciRecursivo implements FibonacciConMetodo {
-
+    /**
+     * Entry point.
+     */
 
     public int calcular(final int n) {
         if (n == 1 || n == 0) {

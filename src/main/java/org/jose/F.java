@@ -10,15 +10,15 @@ public class F {
 
 
         int numero = Integer.parseInt(args[0]);
-        calcularTiempo(numero,new FibonacciBottomUp());
-        calcularTiempo(numero,new FibonacciRecursivo());
+        calcularTiempo(numero, new FibonacciBottomUp());
+        calcularTiempo(numero, new FibonacciRecursivo());
 
     }
 
-    private static void calcularTiempo(int numero, FibonacciConMetodo tipo) {
+    private static void calcularTiempo(final int numero, final FibonacciConMetodo tipo) {
 
         FibonacciConTiempo calculado = new FibonacciConTiempo(tipo);
-        System.out.println("El resultado es: "+calculado.calcular(numero));
+        System.out.println("El resultado es: " + calculado.calcular(numero));
 
     }
 

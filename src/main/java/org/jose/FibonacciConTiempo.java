@@ -1,10 +1,13 @@
 package org.jose;
 
-public class FibonacciConTiempo implements FibonacciCalculator{
+public class FibonacciConTiempo implements FibonacciCalculator {
+    /**
+     * Entry point.
+     */
     private final FibonacciCalculator delegate;
 
-    public FibonacciConTiempo(FibonacciCalculator _delegate) {
-        this.delegate = _delegate;
+    public FibonacciConTiempo(final FibonacciCalculator delegateA) {
+        this.delegate = delegateA;
 
     }
 
