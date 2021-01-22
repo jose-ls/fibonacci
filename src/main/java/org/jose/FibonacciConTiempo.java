@@ -5,10 +5,7 @@ package org.jose;
 public class FibonacciConTiempo implements FibonacciCalculator {
 
     private final FibonacciCalculator delegate;
-    /**
-     * Entry point.
-     * @param delegateA ...
-     */
+
     public FibonacciConTiempo(final FibonacciCalculator delegateA) {
         this.delegate = delegateA;
 
@@ -17,7 +14,7 @@ public class FibonacciConTiempo implements FibonacciCalculator {
     @Override
     /**
      * Entry point.
-     * @param n numero a calcular
+     * @param numero numero a calcular
      * @return devuelve el resultado del numero
      */
     public int calcular(final int numero) {
