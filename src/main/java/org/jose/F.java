@@ -15,7 +15,7 @@ public class F {
 
     }
 
-    private static void calcularTiempo(final int numero,
+    private void calcularTiempo(final int numero,
                                        final FibonacciConMetodo tipo) {
 
         FibonacciConTiempo calculado = new FibonacciConTiempo(tipo);

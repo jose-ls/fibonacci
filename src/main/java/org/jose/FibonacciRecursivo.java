@@ -5,8 +5,8 @@ package org.jose;
 public class FibonacciRecursivo implements FibonacciConMetodo {
     /**
      * Entry point.
-     * @param n
-     * @return
+     * @param n numero a calcular
+     * @return devuelve el resultado del calculo
      */
     public int calcular(final int n) {
         if (n == 1 || n == 0) {

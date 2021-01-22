@@ -7,7 +7,7 @@ public class FibonacciConTiempo implements FibonacciCalculator {
     private final FibonacciCalculator delegate;
     /**
      * Entry point.
-     * @param delegateA
+     * @param delegateA ...
      */
     public FibonacciConTiempo(final FibonacciCalculator delegateA) {
         this.delegate = delegateA;
@@ -17,10 +17,10 @@ public class FibonacciConTiempo implements FibonacciCalculator {
     @Override
     /**
      * Entry point.
-     * @param n
-     * @return
+     * @param n numero a calcular
+     * @return devuelve el resultado del numero
      */
-    public int calcular(int numero) {
+    public int calcular(final int numero) {
         long start = System.currentTimeMillis();
         int numeroCalculado = this.delegate.calcular(numero);
         System.out.println("Tiempo de: " + numero + " in "

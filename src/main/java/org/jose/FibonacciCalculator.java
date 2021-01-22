@@ -5,8 +5,8 @@ package org.jose;
 public interface FibonacciCalculator {
     /**
      * Entry point.
-     * @return
-     * @param numero
+     * @return devuelve el resultado del calculo
+     * @param numero numero a calcular
      */
     int calcular(int numero);
 }
