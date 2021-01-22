@@ -1,22 +1,30 @@
 package org.jose;
+
 /**
  * Entry point.
  */
-public class FibonacciConTiempo implements FibonacciCalculator {
+public final class FibonacciConTiempo implements FibonacciCalculator {
 
     private final FibonacciCalculator delegate;
 
+    /**
+     * Entry point.
+     *
+     * @param delegateA Objeto
+     */
     public FibonacciConTiempo(final FibonacciCalculator delegateA) {
         this.delegate = delegateA;
 
     }
 
-    @Override
+
     /**
      * Entry point.
+     *
      * @param numero numero a calcular
      * @return devuelve el resultado del numero
      */
+    @Override
     public int calcular(final int numero) {
         long start = System.currentTimeMillis();
         int numeroCalculado = this.delegate.calcular(numero);
