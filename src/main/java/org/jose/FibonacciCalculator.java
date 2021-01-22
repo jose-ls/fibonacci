@@ -1,8 +1,12 @@
 package org.jose;
-
+/**
+ * Entry point.
+ */
 public interface FibonacciCalculator {
     /**
      * Entry point.
+     * @return
+     * @param numero
      */
-    public int calcular(int numero);
+    int calcular(int numero);
 }

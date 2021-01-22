@@ -1,10 +1,13 @@
 package org.jose;
-
+/**
+ * Entry point.
+ */
 public class FibonacciRecursivo implements FibonacciConMetodo {
     /**
      * Entry point.
+     * @param n
+     * @return
      */
-
     public int calcular(final int n) {
         if (n == 1 || n == 0) {
             return 1;

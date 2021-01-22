@@ -1,8 +1,12 @@
 package org.jose;
-
+/**
+ * Entry point.
+ */
 public class FibonacciBottomUp implements FibonacciConMetodo {
     /**
      * Entry point.
+     * @param n
+     * @return
      */
     public int calcular(final int n) {
         int resultado = 1;

@@ -8,14 +8,15 @@ public class F {
      */
     public static void main(final String[] args) {
 
-
+        F objeto = new F();
         int numero = Integer.parseInt(args[0]);
-        calcularTiempo(numero, new FibonacciBottomUp());
-        calcularTiempo(numero, new FibonacciRecursivo());
+        objeto.calcularTiempo(numero, new FibonacciBottomUp());
+        objeto.calcularTiempo(numero, new FibonacciRecursivo());
 
     }
 
-    private static void calcularTiempo(final int numero, final FibonacciConMetodo tipo) {
+    private static void calcularTiempo(final int numero,
+                                       final FibonacciConMetodo tipo) {
 
         FibonacciConTiempo calculado = new FibonacciConTiempo(tipo);
         System.out.println("El resultado es: " + calculado.calcular(numero));
