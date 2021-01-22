@@ -4,7 +4,9 @@ package org.jose;
  * Entry point.
  */
 public final class FibonacciConTiempo implements FibonacciCalculator {
-
+    /**
+     * Entry point.
+     */
     private final FibonacciCalculator delegate;
 
     /**
