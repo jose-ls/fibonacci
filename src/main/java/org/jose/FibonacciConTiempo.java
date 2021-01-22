@@ -15,6 +15,7 @@ public final class FibonacciConTiempo implements FibonacciCalculator {
     public FibonacciConTiempo(final FibonacciCalculator delegateA) {
         this.delegate = delegateA;
     }
+
     /**
      * Entry point.
      * @param numero numero a calcular
