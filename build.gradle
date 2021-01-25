@@ -11,7 +11,7 @@ repositories {
 jar {
     manifest {
         attributes(
-                'Main-Class': 'org.jose.F'
+                'Main-Class': 'org.jose.Base'
         )
     }
 }

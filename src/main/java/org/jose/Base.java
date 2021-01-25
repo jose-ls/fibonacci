@@ -1,12 +1,12 @@
 package org.jose;
 
-public class F {
+public class Base {
     /**
      * Entry point.
      * @param args Arguments passed to the program invocation.
      */
     public static void main(final String[] args) {
-        F objeto = new F();
+        Base objeto = new Base();
         int numero = Integer.parseInt(args[0]);
         objeto.calcularTiempo(numero, new FibonacciBottomUp());
         objeto.calcularTiempo(numero, new FibonacciRecursivo());
