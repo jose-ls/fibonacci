@@ -11,7 +11,8 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo {
      * Mapa que guarda numero calculados.
      *
      */
-    private HashMap<Integer, Integer> numerosYaCalculados = new HashMap<Integer, Integer>();
+    private HashMap<Integer, Integer>
+            numerosYaCalculados = new HashMap<Integer, Integer>();
     /**
      * Entry point.
      *
