@@ -11,7 +11,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo {
      * Mapa que guarda numero calculados.
      *
      */
-    private HashMap<Integer, Integer> mapa = new HashMap<Integer, Integer>();
+    private HashMap<Integer, Integer> numerosYaCalculados = new HashMap<Integer, Integer>();
     /**
      * Entry point.
      *
@@ -26,11 +26,11 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo {
         if (numero < 2) {
             return 1;
         }
-        if (mapa.get(numero) != null) {
-            return mapa.get(numero);
+        if (numerosYaCalculados.get(numero) != null) {
+            return numerosYaCalculados.get(numero);
         } else {
             int resultado = calcular(numero - 1) + calcular(numero - 2);
-            mapa.put(numero, resultado);
+            numerosYaCalculados.put(numero, resultado);
             return resultado;
         }
     }
