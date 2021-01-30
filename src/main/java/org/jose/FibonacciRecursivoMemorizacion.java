@@ -8,7 +8,7 @@ import java.util.HashMap;
  */
 public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo {
     /**
-     * Mapa que guarda numero calculados
+     * Mapa que guarda numero calculados.
      *
      */
     private HashMap<Integer, Integer> mapa = new HashMap<Integer, Integer>();
