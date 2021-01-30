@@ -10,6 +10,7 @@ public class Base {
         int numero = Integer.parseInt(args[0]);
         objeto.calcularTiempo(numero, new FibonacciBottomUp());
         objeto.calcularTiempo(numero, new FibonacciRecursivo());
+        objeto.calcularTiempo(numero, new FibonacciRecursivoMemorizacion());
     }
 
     private void calcularTiempo(final int numero,
