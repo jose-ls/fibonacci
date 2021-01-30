@@ -4,10 +4,10 @@ import java.util.HashMap;
 
 /**
  * Entry point.
+ *
  */
 public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo {
-    HashMap<Integer, Integer> mapa = new HashMap<Integer, Integer>();
-
+    private HashMap<Integer, Integer> mapa = new HashMap<Integer, Integer>();
     /**
      * Entry point.
      *
@@ -15,7 +15,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo {
      * @return devuelve el resultado del calculo
      */
     @Override
-    public int calcular(int numero) {
+    public int calcular(final int numero) {
         if (numero == 0) {
             return 1;
         }
