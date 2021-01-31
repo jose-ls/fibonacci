@@ -48,4 +48,4 @@ jobs:
      - name: Publish release on GitHub
        run: .scripts/release_github.sh
        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GITHUB_TOKEN_RELEASES: ${{ secrets.GITHUB_TOKEN_RELEASES }}

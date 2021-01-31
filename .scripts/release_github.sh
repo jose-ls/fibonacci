@@ -13,7 +13,7 @@ BODY="{
 # Create the release in GitHub and extract its id from the response
 RESPONSE_BODY=$(curl -s \
   -v \
-  -u "${CIRCLE_USERNAME}":"${GITHUB_TOKEN}" \
+  -u jose-ls:"${TOKEN_RELEASES}" \
   --header "Accept: application/vnd.github.v3+json" \
   --header "Content-Type: application/json; charset=utf-8" \
   --request POST \
