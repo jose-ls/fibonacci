@@ -39,13 +39,10 @@ jobs:
   release:
     if: github.ref == 'refs/heads/master'
     needs: [lint, assemble, javadoc, test]
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-     - name: Checkout code
-       uses: actions/checkout@v2
-     - name: Assemble jar
-       run: ./gradlew jar
-     - name: Publish release on GitHub
-       run: .scripts/release_github.sh
-       env:
-         TOKEN_RELEASES: ${{ secrets.TOKEN_RELEASES }}
+      - uses: rymndhng/release-on-push-action@master
+        with:
+          bump_version_scheme: minor
