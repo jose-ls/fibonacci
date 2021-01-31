@@ -3,6 +3,9 @@ set -e
 
 REVISION=$(git rev-parse HEAD)
 
+git tag -a "${REVISION}"
+git push --tags
+
 BODY="{
       \"tag_name\": \"$REVISION\",
       \"target_commitish\": \"master\",
