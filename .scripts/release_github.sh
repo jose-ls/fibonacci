@@ -18,7 +18,7 @@ RESPONSE_BODY=$(curl -s \
   --header "Content-Type: application/json; charset=utf-8" \
   --request POST \
   --data "${BODY}" \
-  https://api.github.com/repos/jose-ls/fibonaccis/releases)
+  https://api.github.com/repos/jose-ls/fibonacci/releases)
 
 # Extract the upload_url value
 UPLOAD_URL=$(echo "${RESPONSE_BODY}" | jq -r .upload_url)
