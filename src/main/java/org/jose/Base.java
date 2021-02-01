@@ -14,8 +14,8 @@ public class Base {
         boolean salir = false;
         int opcion;
         while (!salir) {
-            System.out.println("Elige que método usar " +
-                    "para calcular fibonacci");
+            System.out.println("Elige que método usar "
+                    + "para calcular fibonacci");
             System.out.println(" ");
             System.out.println("     1. BottomUp ");
             System.out.println("     2. Recursivo ");
@@ -43,8 +43,8 @@ public class Base {
                         salir = true;
                         break;
                     default:
-                        System.out.println("Solo hay cuatro opciones, " +
-                                "elige entre 1,2,3 y 4");
+                        System.out.println("Solo hay cuatro opciones,"
+                                + " elige entre 1,2,3 y 4");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Debes insertar un numero");
