@@ -6,13 +6,14 @@ import java.util.Scanner;
 public class Base {
     /**
      * Entry point.
+     *
      * @param args Arguments passed to the program invocation.
      */
     public static void main(final String[] args) {
         Base objeto = new Base();
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
-        int opcion=-1;
+        int opcion = -1;
         while (!salir) {
             System.out.println(" ");
             System.out.println("Elige que método usar "
@@ -27,27 +28,24 @@ public class Base {
             try {
                 opcion = sn.nextInt();
 
-                switch (opcion) {
-                    case 1:
-                        objeto.calcularTiempo(objeto.escogerNumero(),
-                                new FibonacciBottomUp());
-                        break;
-                    case 2:
-                        objeto.calcularTiempo(objeto.escogerNumero(),
-                                new FibonacciRecursivo());
-                        break;
-                    case 3:
-                        objeto.calcularTiempo(objeto.escogerNumero(),
-                                new FibonacciRecursivoMemorizacion());
-                        break;
-                    case 4:
-                        salir = true;
-                        break;
-                    default:
-                        System.out.println(" ");
-                        System.out.println("Solo hay cuatro opciones,"
-                                + " elige entre 1,2,3 y 4");
+                if (opcion == 1) {
+                    objeto.calcularTiempo(objeto.escogerNumero(),
+                            new FibonacciBottomUp());
                 }
+                if (opcion == 2)
+                    objeto.calcularTiempo(objeto.escogerNumero(),
+                            new FibonacciRecursivo());
+                if (opcion == 3)
+                    objeto.calcularTiempo(objeto.escogerNumero(),
+                            new FibonacciRecursivoMemorizacion());
+                if (opcion == 4)
+                    salir = true;
+                if (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) {
+                    System.out.println(" ");
+                    System.out.println("Solo hay cuatro opciones,"
+                            + " elige entre 1,2,3 y 4");
+                }
+
             } catch (InputMismatchException e) {
                 System.out.println("Debes insertar un numero");
                 sn.next();
