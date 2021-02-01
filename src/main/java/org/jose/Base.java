@@ -12,8 +12,9 @@ public class Base {
         Base objeto = new Base();
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
-        int opcion;
+        int opcion=-1;
         while (!salir) {
+            System.out.println(" ");
             System.out.println("Elige que método usar "
                     + "para calcular fibonacci");
             System.out.println(" ");
@@ -43,6 +44,7 @@ public class Base {
                         salir = true;
                         break;
                     default:
+                        System.out.println(" ");
                         System.out.println("Solo hay cuatro opciones,"
                                 + " elige entre 1,2,3 y 4");
                 }
@@ -63,6 +65,7 @@ public class Base {
         int numero = -1;
         Scanner sn = new Scanner(System.in);
         while (numero < 0) {
+            System.out.println(" ");
             System.out.println("¿Qué número quieres calcular? ");
             numero = sn.nextInt();
             try {
@@ -72,6 +75,7 @@ public class Base {
                     numero = sn.nextInt();
                 }
             } catch (InputMismatchException e) {
+                System.out.println(" ");
                 System.out.println("Debes insertar un numero");
                 sn.next();
                 numero = sn.nextInt();
