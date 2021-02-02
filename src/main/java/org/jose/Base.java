@@ -3,20 +3,19 @@ package org.jose;
 import java.util.Scanner;
 
 public class Base {
+    static final String menuBottomUp = "1";
+    static final String menuRecursivo = "2";
+    static final String menuRecursivoMemoria = "3";
+    static final String menuSalir = "4";
+    static boolean salir = false;
+    static String opcion = "-1";
     /**
      * Entry point.
-     *
      * @param args Arguments passed to the program invocation.
      */
     public static void main(final String[] args) {
         Base objeto = new Base();
         Scanner sn = new Scanner(System.in);
-        boolean salir = false;
-        String opcion = "-1";
-        final String menuBottomUp = "1";
-        final String menuRecursivo = "2";
-        final String menuRecursivoMemoria = "3";
-        final String menuSalir = "4";
         while (!salir) {
             System.out.println(" ");
             System.out.println("Elige que método usar "
