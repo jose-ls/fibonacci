@@ -3,26 +3,25 @@ package org.jose;
 import java.util.Scanner;
 
 /**
- *
+ * Entry point.
+ * @MENU_BOTTOM_UP opcion calcular bottom up
+ * @MENU_RECURSIVO opcion calcular recursivo
+ * @MENU_RECURSIVO_MEMORIA opcion calcular recursivo con memoria
+ * @MENU_SALIR opcion salir
+ * @salir control de salida
+ * @opcion almacena la opcion elegida
  */
 public class Base {
-    /**
-     * Entry point.
-     * @param MENU_BOTTOM_UP opcion calcular bottom up
-     * @param MENU_RECURSIVO opcion calcular recursivo
-     * @param MENU_RECURSIVO_MEMORIA opcion calcular recursivo con memoria
-     * @param MENU_SALIR opcion salir
-     * @param salir control de salida
-     * @param opcion almacena la opcion elegida
-     */
     static final String MENU_BOTTOM_UP = "1";
     static final String MENU_RECURSIVO = "2";
     static final String MENU_RECURSIVO_MEMORIA = "3";
     static final String MENU_SALIR = "4";
     private static boolean salir = false;
     private static String opcion = "-1";
+
     /**
      * Entry point.
+     *
      * @param args Arguments passed to the program invocation.
      */
     public static void main(final String[] args) {
