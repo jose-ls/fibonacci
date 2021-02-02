@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class Base {
     /**
      * Entry point.
-     * @param MENU_BOTTOM_UP
-     * @param MENU_RECURSIVO
-     * @param MENU_RECURSIVO_MEMORIA
-     * @param MENU_SALIR
-     * @param salir
+     * @param MENU_BOTTOM_UP opcion calcular bottom up
+     * @param MENU_RECURSIVO opcion calcular recursivo
+     * @param MENU_RECURSIVO_MEMORIA opcion calcular recursivo con memoria
+     * @param MENU_SALIR opcion salir
+     * @param salir control de salida
      * @param opcion almacena la opcion elegida
      */
     static final String MENU_BOTTOM_UP = "1";
