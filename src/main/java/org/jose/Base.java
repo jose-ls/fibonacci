@@ -34,12 +34,12 @@ public class Base {
             System.out.println("Elige que método usar "
                     + "para calcular fibonacci");
             System.out.println(" ");
-            System.out.println("     "+MENU_BOTTOM_UP+". BottomUp ");
-            System.out.println("     "+MENU_RECURSIVO+". Recursivo ");
-            System.out.println("     "+MENU_RECURSIVO_MEMORIA
-                    +". Recursivo con Memoria ");
+            System.out.println("     " + MENU_BOTTOM_UP + ". BottomUp ");
+            System.out.println("     " + MENU_RECURSIVO + ". Recursivo ");
+            System.out.println("     " + MENU_RECURSIVO_MEMORIA
+                    + ". Recursivo con Memoria ");
             System.out.println(" ");
-            System.out.println("     "+MENU_SALIR+". Salir ");
+            System.out.println("     " + MENU_SALIR + ". Salir ");
             opcion = sn.next();
             switch (opcion) {
                 case MENU_BOTTOM_UP:
