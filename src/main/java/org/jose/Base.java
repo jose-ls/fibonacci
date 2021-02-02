@@ -1,10 +1,8 @@
 package org.jose;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- * Entry point.
- */
 public class Base {
     /**
      * opcion bottom up.
@@ -23,19 +21,12 @@ public class Base {
      */
     static final String MENU_SALIR = "4";
     /**
-     * variable de control para la salida.
-     */
-    private static boolean salir = false;
-    /**
-     * variable para la seleccion de una opcion.
-     */
-    private static String opcion = "-1";
-    /**
      * Entry point.
-     *
      * @param args Arguments passed to the program invocation.
      */
     public static void main(final String[] args) {
+        boolean salir = false;
+        String opcion = "-1";
         Base objeto = new Base();
         Scanner sn = new Scanner(System.in);
         while (!salir) {
@@ -43,11 +34,12 @@ public class Base {
             System.out.println("Elige que método usar "
                     + "para calcular fibonacci");
             System.out.println(" ");
-            System.out.println("     1. BottomUp ");
-            System.out.println("     2. Recursivo ");
-            System.out.println("     3. Recursivo con Memoria ");
+            System.out.println("     "+MENU_BOTTOM_UP+". BottomUp ");
+            System.out.println("     "+MENU_RECURSIVO+". Recursivo ");
+            System.out.println("     "+MENU_RECURSIVO_MEMORIA
+                    +". Recursivo con Memoria ");
             System.out.println(" ");
-            System.out.println("     4. Salir ");
+            System.out.println("     "+MENU_SALIR+". Salir ");
             opcion = sn.next();
             switch (opcion) {
                 case MENU_BOTTOM_UP:
@@ -81,19 +73,17 @@ public class Base {
 
     private int escogerNumero() {
         int numero = -1;
-        String scanNumber;
-        int auxNumber;
         Scanner sn = new Scanner(System.in);
         System.out.println("¿Qué número quieres calcular? ");
         while (numero < 0) {
             try {
-                scanNumber = sn.next();
-                auxNumber = Integer.parseInt(scanNumber);
-                if (auxNumber > 0) {
-                    numero = auxNumber;
+                numero = sn.nextInt();
+                if (numero < 0) {
+                    System.out.println("Inserta un numero mayor que 0");
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Introduce un numero valido");
+            } catch (InputMismatchException e) {
+                System.out.println("Debes insertar un numero");
+                sn.next();
             }
         }
         return numero;
