@@ -2,6 +2,9 @@ package org.jose;
 
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class Base {
     /**
      * Entry point.
@@ -16,8 +19,8 @@ public class Base {
     static final String MENU_RECURSIVO = "2";
     static final String MENU_RECURSIVO_MEMORIA = "3";
     static final String MENU_SALIR = "4";
-    static boolean salir = false;
-    static String opcion = "-1";
+    private static boolean salir = false;
+    private static String opcion = "-1";
     /**
      * Entry point.
      * @param args Arguments passed to the program invocation.
