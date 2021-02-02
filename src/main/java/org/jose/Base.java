@@ -61,20 +61,22 @@ public class Base {
 
     private int escogerNumero() {
         int numero = -1;
+        String scanNumber;
+        int auxNumber;
         Scanner sn = new Scanner(System.in);
         while (numero < 0) {
             System.out.println("¿Qué número quieres calcular? ");
-            numero = sn.nextInt();
             try {
-                if (numero < 0) {
-                    System.out.println("Inserta un numero mayor que 0");
-                    sn.next();
-                    numero = sn.nextInt();
+                scanNumber = sn.next();
+                auxNumber = Integer.parseInt(scanNumber);
+                if (auxNumber > 0) {
+                    numero = auxNumber;
+                } else {
+                    System.out.println("Inserta un numero valido");
+                    scanNumber = sn.next();
                 }
-            } catch (InputMismatchException e) {
-                System.out.println("Debes insertar un numero");
-                sn.next();
-                numero = sn.nextInt();
+            } catch (NumberFormatException e) {
+                System.out.println("Introduce un numero valido");
             }
         }
         return numero;
