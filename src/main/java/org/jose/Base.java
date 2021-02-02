@@ -63,16 +63,13 @@ public class Base {
         String scanNumber;
         int auxNumber;
         Scanner sn = new Scanner(System.in);
+        System.out.println("¿Qué número quieres calcular? ");
         while (numero < 0) {
-            System.out.println("¿Qué número quieres calcular? ");
             try {
                 scanNumber = sn.next();
                 auxNumber = Integer.parseInt(scanNumber);
                 if (auxNumber > 0) {
                     numero = auxNumber;
-                } else {
-                    System.out.println("Inserta un numero valido");
-                    scanNumber = sn.next();
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Introduce un numero valido");
