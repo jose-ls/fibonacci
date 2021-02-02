@@ -4,21 +4,32 @@ import java.util.Scanner;
 
 /**
  * Entry point.
- * @MENU_BOTTOM_UP opcion calcular bottom up
- * @MENU_RECURSIVO opcion calcular recursivo
- * @MENU_RECURSIVO_MEMORIA opcion calcular recursivo con memoria
- * @MENU_SALIR opcion salir
- * @salir control de salida
- * @opcion almacena la opcion elegida
  */
 public class Base {
+    /**
+     * opcion bottom up
+     */
     static final String MENU_BOTTOM_UP = "1";
+    /**
+     * opcion recursivo
+     */
     static final String MENU_RECURSIVO = "2";
+    /**
+     * opcion recursivo con memoria
+     */
     static final String MENU_RECURSIVO_MEMORIA = "3";
+    /**
+     * opcion salir
+     */
     static final String MENU_SALIR = "4";
+    /**
+     * variable de control para la salida
+     */
     private static boolean salir = false;
+    /**
+     * variable para la seleccion de una opcion
+     */
     private static String opcion = "-1";
-
     /**
      * Entry point.
      *
