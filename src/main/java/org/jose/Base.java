@@ -3,10 +3,19 @@ package org.jose;
 import java.util.Scanner;
 
 public class Base {
-    static final String menuBottomUp = "1";
-    static final String menuRecursivo = "2";
-    static final String menuRecursivoMemoria = "3";
-    static final String menuSalir = "4";
+    /**
+     * Entry point.
+     * @param MENU_BOTTOM_UP
+     * @param MENU_RECURSIVO
+     * @param MENU_RECURSIVO_MEMORIA
+     * @param MENU_SALIR
+     * @param salir
+     * @param opcion almacena la opcion elegida
+     */
+    static final String MENU_BOTTOM_UP = "1";
+    static final String MENU_RECURSIVO = "2";
+    static final String MENU_RECURSIVO_MEMORIA = "3";
+    static final String MENU_SALIR = "4";
     static boolean salir = false;
     static String opcion = "-1";
     /**
@@ -28,19 +37,19 @@ public class Base {
             System.out.println("     4. Salir ");
             opcion = sn.next();
             switch (opcion) {
-                case menuBottomUp:
+                case MENU_BOTTOM_UP:
                     objeto.calcularTiempo(objeto.escogerNumero(),
                             new FibonacciBottomUp());
                     break;
-                case menuRecursivo:
+                case MENU_RECURSIVO:
                     objeto.calcularTiempo(objeto.escogerNumero(),
                             new FibonacciRecursivo());
                     break;
-                case menuRecursivoMemoria:
+                case MENU_RECURSIVO_MEMORIA:
                     objeto.calcularTiempo(objeto.escogerNumero(),
                             new FibonacciRecursivoMemorizacion());
                     break;
-                case menuSalir:
+                case MENU_SALIR:
                     salir = true;
                     break;
                 default:
