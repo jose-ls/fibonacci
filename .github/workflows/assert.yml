@@ -21,14 +21,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Assemble outputs
-        run: echo "TODO assemble outputs"
+        run: ./gradlew jar
+
   javadoc:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Generate javadoc
-        run: echo "TODO generate javadoc"
+        run: ./gradlew javadoc
   test:
     runs-on: ubuntu-20.04
     steps:

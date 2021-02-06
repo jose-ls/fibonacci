@@ -1,4 +1,4 @@
 /**
- * Package {@link org.jose}.
+ * Paquete.
  */
 package org.jose;
