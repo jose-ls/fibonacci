@@ -1,4 +1,4 @@
 /**
- * Package {@link org.jose}.
+ * Package info.
  */
 package org.jose;

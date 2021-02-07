@@ -1,7 +1,7 @@
 package org.jose;
 
 /**
- *
+ * Implementa la clase Fibonacci con timepo.
  */
 public final class FibonacciConTiempo implements Runnable {
     /**
