@@ -22,7 +22,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Assemble outputs
         run: ./gradlew jar
-
   javadoc:
     runs-on: ubuntu-20.04
     steps:
