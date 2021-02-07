@@ -3,30 +3,25 @@ package org.jose;
 /**
  * Entry point.
  */
-public final class FibonacciConTiempo implements FibonacciCalculator {
+public final class FibonacciConTiempo implements Runnable {
     /**
      * Entry point.
      */
-    private final FibonacciCalculator delegate;
+    private final Runnable delegate;
     /**
      * Entry point.
      * @param delegateA Objeto
      */
-    public FibonacciConTiempo(final FibonacciCalculator delegateA) {
+    public FibonacciConTiempo(final Runnable delegateA) {
         this.delegate = delegateA;
     }
-
     /**
-     * Entry point.
-     * @param numero numero a calcular
-     * @return devuelve el resultado del numero
+     * Implementación método run.
      */
-    @Override
-    public int calcular(final int numero) {
+    public void run() {
         long start = System.currentTimeMillis();
-        int numeroCalculado = this.delegate.calcular(numero);
-        System.out.println("Tiempo de: " + numero + " in "
+        this.delegate.run();
+        System.out.println("Tiempo de calculo: "
                 + (System.currentTimeMillis() - start) + "ms");
-        return numeroCalculado;
     }
 }
