@@ -1,7 +1,7 @@
 package org.jose;
 
 /**
- * Entry point.
+ * Implementación interface Fibonacci con tiempo.
  */
 public interface FibonacciConMetodo extends Runnable {
 }

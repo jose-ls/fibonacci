@@ -20,8 +20,8 @@ public class Base {
      * opcion salir.
      */
     static final String MENU_SALIR = "4";
+
     /**
-     * Entry point.
      * @param args Arguments passed to the program invocation.
      */
     public static void main(final String[] args) {
@@ -43,16 +43,16 @@ public class Base {
             opcion = sn.next();
             switch (opcion) {
                 case MENU_BOTTOM_UP:
-                    objeto.calcularTiempo(objeto.escogerNumero(),
-                            new FibonacciBottomUp());
+                    objeto.calcularTiempo(
+                            new FibonacciBottomUp(objeto.escogerNumero(), new Impresora()));
                     break;
                 case MENU_RECURSIVO:
-                    objeto.calcularTiempo(objeto.escogerNumero(),
-                            new FibonacciRecursivo());
+                    objeto.calcularTiempo(
+                            new FibonacciRecursivo(objeto.escogerNumero(), new Impresora()));
                     break;
                 case MENU_RECURSIVO_MEMORIA:
-                    objeto.calcularTiempo(objeto.escogerNumero(),
-                            new FibonacciRecursivoMemorizacion());
+                    objeto.calcularTiempo(
+                            new FibonacciRecursivoMemorizacion(objeto.escogerNumero(), new Impresora()));
                     break;
                 case MENU_SALIR:
                     salir = true;
@@ -65,10 +65,9 @@ public class Base {
         }
     }
 
-    private void calcularTiempo(final int numero,
-                                final FibonacciConMetodo tipo) {
-        FibonacciConTiempo calculado = new FibonacciConTiempo(tipo);
-        System.out.println("El resultado es: " + calculado.run(numero));
+    private void calcularTiempo(final FibonacciConMetodo tipo) {
+        new FibonacciConTiempo(tipo).run();
+
     }
 
     private int escogerNumero() {

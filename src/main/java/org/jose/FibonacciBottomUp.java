@@ -1,31 +1,45 @@
 package org.jose;
 
 /**
- * Entry point.
+ * Implementación clase Fibonacci BottomUp.
  */
 public class FibonacciBottomUp implements FibonacciConMetodo {
     /**
-     * Entry point.
      *
-     * @param n numero a calcular
-     * @return devuelve el resultado del calculo
      */
-    public int calcular(final int n) {
+    private int numero;
+    /**
+     *
+     */
+    private ResultListener resultListener;
+
+    /**
+     *
+     */
+    public FibonacciBottomUp(int numero, ResultListener resultListener) {
+        this.numero = numero;
+        this.resultListener = resultListener;
+    }
+
+    /**
+     * Implementación método run.
+     */
+    public void run() {
         int resultado = 1;
         int nmenos1 = 1;
         int nmenos2 = 1;
-        if (n == 1 || n == 0) {
-            return 1;
+        if (numero == 1 || numero == 0) {
+            resultListener.onResult(1);
         } else {
-            if (n > 0) {
-                for (int i = 2; i <= n; i++) {
+            if (numero > 0) {
+                for (int i = 2; i <= numero; i++) {
                     resultado = nmenos1 + nmenos2;
                     nmenos2 = nmenos1;
                     nmenos1 = resultado;
                 }
-                return resultado;
+                resultListener.onResult(resultado);
             } else {
-                throw new RuntimeException("Error de calculo con: " + n);
+                throw new RuntimeException("Error de calculo con: " + numero);
             }
         }
     }
