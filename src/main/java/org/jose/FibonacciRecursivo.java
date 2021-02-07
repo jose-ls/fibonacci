@@ -21,12 +21,12 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
     private ResultListener resultListener;
 
     /**
-     * 
+     * Constructor de la clase Fibonacci Recursivo.
      * @param numberToCalculate número a calcular.
      * @param resultsListener .
      */
     public FibonacciRecursivo(final int numberToCalculate,
-                              ResultListener resultsListener) {
+                              final ResultListener resultsListener) {
         this.number = numberToCalculate;
         this.resultListener = resultsListener;
     }

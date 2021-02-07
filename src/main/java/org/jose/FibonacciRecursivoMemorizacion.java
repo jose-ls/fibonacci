@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
-
 /**
  * Entry point.
  */
@@ -29,12 +28,11 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
             numerosYaCalculados = new HashMap<Integer, Integer>();
 
     /**
-     *
      * @param numberToCalculate número a calcular.
-     * @param resultsListener .
+     * @param resultsListener   .
      */
-    public FibonacciRecursivoMemorizacion(final int numberToCalculate,
-                                          final ResultListener resultsListener) {
+    public FibonacciRecursivoMemorizacion(
+            final int numberToCalculate, final ResultListener resultsListener) {
         this.number = numberToCalculate;
         this.resultListener = resultsListener;
     }
@@ -60,10 +58,11 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
 
     /**
      * Calcula el resultado.
+     *
      * @param result .
      */
     @Override
-    public void onResult(int result) {
+    public void onResult(final int result) {
         pilaDeNumeros.add(result);
         if (pilaDeNumeros.size() == 2) {
             int suma = 0;
