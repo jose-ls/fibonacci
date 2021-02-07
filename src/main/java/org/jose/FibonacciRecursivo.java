@@ -51,7 +51,7 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
      * @param result Resultado del calulo.
      */
     @Override
-    public void onResult(int result) {
+    public void onResult(final int result) {
         pilaDeNumeros.add(result);
         if (pilaDeNumeros.size() == 2) {
             int suma = 0;
