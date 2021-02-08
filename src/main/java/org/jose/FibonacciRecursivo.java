@@ -38,10 +38,10 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
      * mediante recursividad.
      */
     public void run() {
-        if (number == 1 || number == 0) {
+        if (number <2) {
             resultListener.onResult(1);
         } else {
-            if (number > 0) {
+            if (number >= 2) {
                 new FibonacciRecursivo(number - 1, this).run();
                 new FibonacciRecursivo(number - 2, this).run();
             } else {

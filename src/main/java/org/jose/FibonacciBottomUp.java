@@ -35,7 +35,7 @@ public class FibonacciBottomUp implements FibonacciConMetodo {
         if (number < 2) {
             resultListener.onResult(1);
         }
-        if (number > 0) {
+        if (number >= 2) {
             for (int i = 2; i <= number; i++) {
                 resultado = nmenos1 + nmenos2;
                 nmenos2 = nmenos1;
