@@ -13,13 +13,15 @@ public class FibonacciBottomUp implements FibonacciConMetodo {
      * Campo de la clase.
      */
     private ResultListener resultListener;
+
     /**
      * Constructor para Fibonacci BottomUp.
+     *
      * @param numberToCalculate número a calcular.
-     * @param resultsListener .
+     * @param resultsListener   .
      */
     public FibonacciBottomUp(final int numberToCalculate,
-                             final  ResultListener resultsListener) {
+                             final ResultListener resultsListener) {
         this.number = numberToCalculate;
         this.resultListener = resultsListener;
     }

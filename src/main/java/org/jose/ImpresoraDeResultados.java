@@ -7,6 +7,7 @@ package org.jose;
 public class ImpresoraDeResultados implements ResultListener {
     /**
      * Este método imprime el resultado de un cálculo.
+     *
      * @param result resultado del calculo.
      */
     @Override

@@ -8,8 +8,10 @@ public final class FibonacciConTiempo implements Runnable {
      * Campo de la clase.
      */
     private final Runnable delegate;
+
     /**
      * Constructor para la clase Fibonacci con tiempo.
+     *
      * @param delegateA Objeto
      */
     public FibonacciConTiempo(final Runnable delegateA) {

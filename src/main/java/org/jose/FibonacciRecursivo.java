@@ -24,8 +24,9 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
 
     /**
      * Constructor de la clase Fibonacci Recursivo.
+     *
      * @param numberToCalculate número a calcular.
-     * @param resultsListener .
+     * @param resultsListener   .
      */
     public FibonacciRecursivo(final int numberToCalculate,
                               final ResultListener resultsListener) {
@@ -38,7 +39,7 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
      * mediante recursividad.
      */
     public void run() {
-        if (number <2) {
+        if (number < 2) {
             resultListener.onResult(1);
         } else {
             if (number >= 2) {
@@ -52,6 +53,7 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
 
     /**
      * Resuelve la suma de los resultados de n-1 y n-2.
+     *
      * @param result Resultado del calulo.
      */
     @Override
