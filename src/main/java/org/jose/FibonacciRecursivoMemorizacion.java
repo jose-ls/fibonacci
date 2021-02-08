@@ -31,6 +31,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
 
     /**
      * Constructor de la clase Fibonacci Recursivo con Memorización.
+     *
      * @param numberToCalculate número a calcular.
      * @param resultsListener   .
      */
@@ -48,8 +49,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
     public void run() {
         if (number < 2) {
             resultListener.onResult(1);
-        }
-        else {
+        } else {
             if (numerosYaCalculados.get(number) != null) {
                 resultListener.onResult(numerosYaCalculados.get(number));
             } else {
@@ -61,6 +61,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
 
     /**
      * Resuelve la suma de los resultados de n-1 y n-2.
+     *
      * @param result resultado del calculo.
      */
     @Override
