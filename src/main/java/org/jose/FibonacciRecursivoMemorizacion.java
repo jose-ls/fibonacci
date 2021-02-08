@@ -5,20 +5,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Implementación de la clase Recursivo con memoria.
+ * Esta clase define objetos de la clase Fibonacci Recursivo con memoria que se
+ * usan para calcular la suma de un número por este método.
  */
 public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
         ResultListener {
     /**
+     * Campo de la clase.
      * Lista que almacena los resultados del calculo.
      */
     private List<Integer> pilaDeNumeros = new LinkedList<>();
     /**
-     * Número a calcular.
+     * Campo de la clase.
      */
     private int number;
     /**
-     *
+     * Campo de la clase.
      */
     private ResultListener resultListener;
     /**
@@ -28,6 +30,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
             numerosYaCalculados = new HashMap<Integer, Integer>();
 
     /**
+     * Constructor de la clase Fibonacci Recursivo con Memorización.
      * @param numberToCalculate número a calcular.
      * @param resultsListener   .
      */
@@ -38,13 +41,11 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
     }
 
     /**
-     * Implementación método run.
+     * Implementa el método run para el cálculo del número
+     * mediante recursividad con memoria.
      */
     @Override
     public void run() {
-        if (number == 0) {
-            resultListener.onResult(1);
-        }
         if (number < 2) {
             resultListener.onResult(1);
         }
@@ -57,8 +58,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
     }
 
     /**
-     * Calcula el resultado.
-     *
+     * Resuelve la suma de los resultados de n-1 y n-2.
      * @param result resultado del calculo.
      */
     @Override

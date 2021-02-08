@@ -1,7 +1,7 @@
 package org.jose;
 
 /**
- * Interface para notificar resultados.
+ * Implementa la Interface ResultListener para notificar resultados.
  */
 public interface ResultListener {
     /**
