@@ -48,7 +48,7 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
     }
 
     /**
-     * @param result Resultado del calulo.
+     * @param result .
      */
     @Override
     public void onResult(int result) {

@@ -1,12 +1,9 @@
 package org.jose;
 
-/**
- * Implementa la clase Impresora.
- */
 public class Impresora implements ResultListener {
     /**
      *
-     * @param result resultado del calculo.
+     * @param result .
      */
     @Override
     public void onResult(final int result) {

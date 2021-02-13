@@ -5,16 +5,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Implementación de la clase Recursivo con memoria.
+ * Entry point.
  */
 public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
         ResultListener {
     /**
-     * Lista que almacena los resultados del calculo.
+     *
      */
     private List<Integer> pilaDeNumeros = new LinkedList<>();
     /**
-     * Número a calcular.
+     *
      */
     private int number;
     /**
@@ -59,7 +59,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
     /**
      * Calcula el resultado.
      *
-     * @param result resultado del calculo.
+     * @param result .
      */
     @Override
     public void onResult(final int result) {

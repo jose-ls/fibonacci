@@ -54,8 +54,8 @@ public class Base {
                     break;
                 case MENU_RECURSIVO_MEMORIA:
                     objeto.calcularTiempo(
-                            new FibonacciRecursivoMemorizacion(
-                                    objeto.escogerNumero(), new Impresora()));
+                            new FibonacciRecursivoMemorizacion(objeto.escogerNumero(),
+                                    new Impresora()));
                     break;
                 case MENU_SALIR:
                     salir = true;
