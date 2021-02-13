@@ -14,35 +14,29 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
     /**
      *
      */
-    private int number;
+    private int numero;
     /**
      *
      */
     private ResultListener resultListener;
 
-    /**
-     * 
-     * @param numberToCalculate número a calcular.
-     * @param resultsListener .
-     */
-    public FibonacciRecursivo(final int numberToCalculate,
-                              ResultListener resultsListener) {
-        this.number = numberToCalculate;
-        this.resultListener = resultsListener;
+    public FibonacciRecursivo(int numero, ResultListener resultListener) {
+        this.numero = numero;
+        this.resultListener = resultListener;
     }
 
     /**
      * Implementa el método run.
      */
     public void run() {
-        if (number == 1 || number == 0) {
+        if (numero == 1 || numero == 0) {
             resultListener.onResult(1);
         } else {
-            if (number > 0) {
-                new FibonacciRecursivo(number - 1, this).run();
-                new FibonacciRecursivo(number - 2, this).run();
+            if (numero > 0) {
+                new FibonacciRecursivo(numero - 1, this).run();
+                new FibonacciRecursivo(numero - 2, this).run();
             } else {
-                throw new RuntimeException("Error de calculo con: " + number);
+                throw new RuntimeException("Error de calculo con: " + numero);
             }
         }
     }

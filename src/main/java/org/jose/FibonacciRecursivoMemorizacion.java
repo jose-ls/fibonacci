@@ -17,7 +17,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
     /**
      *
      */
-    private int number;
+    private int numero;
     /**
      *
      */
@@ -28,15 +28,10 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
     private static HashMap<Integer, Integer>
             numerosYaCalculados = new HashMap<Integer, Integer>();
 
-    /**
-     *
-     * @param numberToCalculate número a calcular.
-     * @param resultsListener .
-     */
-    public FibonacciRecursivoMemorizacion(final int numberToCalculate,
-                                          final ResultListener resultsListener) {
-        this.number = numberToCalculate;
-        this.resultListener = resultsListener;
+    public FibonacciRecursivoMemorizacion(int numero,
+                                          ResultListener resultListener) {
+        this.numero = numero;
+        this.resultListener = resultListener;
     }
 
     /**
@@ -44,17 +39,17 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
      */
     @Override
     public void run() {
-        if (number == 0) {
+        if (numero == 0) {
             resultListener.onResult(1);
         }
-        if (number < 2) {
+        if (numero < 2) {
             resultListener.onResult(1);
         }
-        if (numerosYaCalculados.get(number) != null) {
-            resultListener.onResult(numerosYaCalculados.get(number));
+        if (numerosYaCalculados.get(numero) != null) {
+            resultListener.onResult(numerosYaCalculados.get(numero));
         } else {
-            new FibonacciRecursivoMemorizacion(number - 1, this).run();
-            new FibonacciRecursivoMemorizacion(number - 2, this).run();
+            new FibonacciRecursivoMemorizacion(numero - 1, this).run();
+            new FibonacciRecursivoMemorizacion(numero - 2, this).run();
         }
     }
 
@@ -70,7 +65,7 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
             for (int i = 0; i < pilaDeNumeros.size(); i++) {
                 suma = suma + pilaDeNumeros.get(i);
             }
-            numerosYaCalculados.put(number, suma);
+            numerosYaCalculados.put(numero, suma);
             pilaDeNumeros.clear();
             resultListener.onResult(suma);
         }

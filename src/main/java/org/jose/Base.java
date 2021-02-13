@@ -44,18 +44,15 @@ public class Base {
             switch (opcion) {
                 case MENU_BOTTOM_UP:
                     objeto.calcularTiempo(
-                            new FibonacciBottomUp(objeto.escogerNumero(),
-                                    new Impresora()));
+                            new FibonacciBottomUp(objeto.escogerNumero(), new Impresora()));
                     break;
                 case MENU_RECURSIVO:
                     objeto.calcularTiempo(
-                            new FibonacciRecursivo(objeto.escogerNumero(),
-                                    new Impresora()));
+                            new FibonacciRecursivo(objeto.escogerNumero(), new Impresora()));
                     break;
                 case MENU_RECURSIVO_MEMORIA:
                     objeto.calcularTiempo(
-                            new FibonacciRecursivoMemorizacion(objeto.escogerNumero(),
-                                    new Impresora()));
+                            new FibonacciRecursivoMemorizacion(objeto.escogerNumero(), new Impresora()));
                     break;
                 case MENU_SALIR:
                     salir = true;

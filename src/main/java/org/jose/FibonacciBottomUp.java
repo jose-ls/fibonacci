@@ -7,7 +7,7 @@ public class FibonacciBottomUp implements FibonacciConMetodo {
     /**
      *
      */
-    private int number;
+    private int numero;
     /**
      *
      */
@@ -15,13 +15,10 @@ public class FibonacciBottomUp implements FibonacciConMetodo {
 
     /**
      *
-     * @param numberToCalculate número a calcular.
-     * @param resultsListener .
      */
-    public FibonacciBottomUp(final int numberToCalculate,
-                             final  ResultListener resultsListener) {
-        this.number = numberToCalculate;
-        this.resultListener = resultsListener;
+    public FibonacciBottomUp(int numero, ResultListener resultListener) {
+        this.numero = numero;
+        this.resultListener = resultListener;
     }
 
     /**
@@ -31,18 +28,18 @@ public class FibonacciBottomUp implements FibonacciConMetodo {
         int resultado = 1;
         int nmenos1 = 1;
         int nmenos2 = 1;
-        if (number == 1 || number == 0) {
+        if (numero == 1 || numero == 0) {
             resultListener.onResult(1);
         } else {
-            if (number > 0) {
-                for (int i = 2; i <= number; i++) {
+            if (numero > 0) {
+                for (int i = 2; i <= numero; i++) {
                     resultado = nmenos1 + nmenos2;
                     nmenos2 = nmenos1;
                     nmenos1 = resultado;
                 }
                 resultListener.onResult(resultado);
             } else {
-                throw new RuntimeException("Error de calculo con: " + number);
+                throw new RuntimeException("Error de calculo con: " + numero);
             }
         }
     }
