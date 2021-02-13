@@ -1,59 +1,24 @@
 package org.jose;
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
- * Implementa la clase Fibonacci Recursivo.
+ * Entry point.
  */
-public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
+public class FibonacciRecursivo implements FibonacciConMetodo {
     /**
+     * Entry point.
      *
+     * @param n numero a calcular
+     * @return devuelve el resultado del calculo
      */
-    private List<Integer> pilaDeNumeros = new LinkedList<>();
-    /**
-     *
-     */
-    private int numero;
-    /**
-     *
-     */
-    private ResultListener resultListener;
-
-    public FibonacciRecursivo(int numero, ResultListener resultListener) {
-        this.numero = numero;
-        this.resultListener = resultListener;
-    }
-
-    /**
-     * Implementa el método run.
-     */
-    public void run() {
-        if (numero == 1 || numero == 0) {
-            resultListener.onResult(1);
+    public int calcular(final int n) {
+        if (n == 1 || n == 0) {
+            return 1;
         } else {
-            if (numero > 0) {
-                new FibonacciRecursivo(numero - 1, this).run();
-                new FibonacciRecursivo(numero - 2, this).run();
+            if (n > 0) {
+                return calcular(n - 1) + calcular(n - 2);
             } else {
-                throw new RuntimeException("Error de calculo con: " + numero);
+                throw new RuntimeException("Error de calculo con: " + n);
             }
-        }
-    }
-
-    /**
-     * @param result .
-     */
-    @Override
-    public void onResult(int result) {
-        pilaDeNumeros.add(result);
-        if (pilaDeNumeros.size() == 2) {
-            int suma = 0;
-            for (int i = 0; i < pilaDeNumeros.size(); i++) {
-                suma = suma + pilaDeNumeros.get(i);
-            }
-            pilaDeNumeros.clear();
-            resultListener.onResult(suma);
         }
     }
 }
