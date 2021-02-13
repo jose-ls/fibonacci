@@ -4,21 +4,19 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Esta clase define objetos de la clase Fibonacci Recursivo que se usan para
- * calcular la suma de un número por este método.
+ * Implementa la clase Fibonacci Recursivo.
  */
 public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
     /**
-     * Campo de la clase.
-     * Almacena los resultados parciales para su suma.
+     *
      */
     private List<Integer> pilaDeNumeros = new LinkedList<>();
     /**
-     * Campo de la clase.
+     *
      */
     private int number;
     /**
-     * Campo de la clase.
+     *
      */
     private ResultListener resultListener;
 
@@ -34,8 +32,7 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
     }
 
     /**
-     * Implementa el método run para el cálculo del número
-     * mediante recursividad.
+     * Implementa el método run.
      */
     public void run() {
         if (number == 1 || number == 0) {
@@ -51,7 +48,6 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
     }
 
     /**
-     * Resuelve la suma de los resultados de n-1 y n-2.
      * @param result Resultado del calulo.
      */
     @Override
