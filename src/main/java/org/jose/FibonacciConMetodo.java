@@ -3,5 +3,5 @@ package org.jose;
 /**
  * Entry point.
  */
-public interface FibonacciConMetodo extends Runnable {
+public interface FibonacciConMetodo extends FibonacciCalculator {
 }
