@@ -34,11 +34,16 @@ public class FibonacciBottomUp implements FibonacciConMetodo {
         int resultado = 1;
         int nmenos1 = 1;
         int nmenos2 = 1;
-        for (int i = 2; i <= number; i++) {
-            resultado = nmenos1 + nmenos2;
-            nmenos2 = nmenos1;
-            nmenos1 = resultado;
+        if (number < 2) {
+            resultListener.onResult(1);
         }
-        resultListener.onResult(resultado);
+        if (number >= 2) {
+            for (int i = 2; i <= number; i++) {
+                resultado = nmenos1 + nmenos2;
+                nmenos2 = nmenos1;
+                nmenos1 = resultado;
+            }
+            resultListener.onResult(resultado);
+        }
     }
 }

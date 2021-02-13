@@ -42,8 +42,12 @@ public class FibonacciRecursivo implements FibonacciConMetodo, ResultListener {
         if (number < 2) {
             resultListener.onResult(1);
         } else {
-            new FibonacciRecursivo(number - 1, this).run();
-            new FibonacciRecursivo(number - 2, this).run();
+            if (number >= 2) {
+                new FibonacciRecursivo(number - 1, this).run();
+                new FibonacciRecursivo(number - 2, this).run();
+            } else {
+                throw new RuntimeException("Error de calculo con: " + number);
+            }
         }
     }
 
