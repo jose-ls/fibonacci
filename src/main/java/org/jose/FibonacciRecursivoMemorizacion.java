@@ -49,13 +49,11 @@ public class FibonacciRecursivoMemorizacion implements FibonacciConMetodo,
         if (number < 2) {
             resultListener.onResult(1);
         }
-        else {
-            if (numerosYaCalculados.get(number) != null) {
-                resultListener.onResult(numerosYaCalculados.get(number));
-            } else {
-                new FibonacciRecursivoMemorizacion(number - 1, this).run();
-                new FibonacciRecursivoMemorizacion(number - 2, this).run();
-            }
+        if (numerosYaCalculados.get(number) != null) {
+            resultListener.onResult(numerosYaCalculados.get(number));
+        } else {
+            new FibonacciRecursivoMemorizacion(number - 1, this).run();
+            new FibonacciRecursivoMemorizacion(number - 2, this).run();
         }
     }
 
